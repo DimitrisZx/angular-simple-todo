@@ -1,0 +1,48 @@
+.container{
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  .todos-container {
+    height: 200px;
+    background: #fff;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    .todo-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 10px;
+      list-style: none;
+      border: 1px solid grey;
+      background: #fff;
+      border-radius: 4px;
+      width: 200px;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+    .btn {
+      padding: 10px 25px;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      font-weight: bold;
+      &-primary {
+        background: rgb(51, 100, 51);
+      }
+      &-danger {
+        background: rgb(124, 45, 45);
+      }
+    }
+  }
+}

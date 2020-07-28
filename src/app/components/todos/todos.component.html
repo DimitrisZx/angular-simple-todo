@@ -1,0 +1,18 @@
+<div class='container'>
+  <ul class='todos-container'>
+    <div *ngIf='todos.length > 0 else elseBlock'>
+
+      <li class='todo-item' *ngFor="let todo of todos">
+        <span>{{ todo.title | titlecase }}</span>
+        <button (click)='deleteTodo(todo.id)' style='margin-left: 10px;'>X</button></li>
+    </div>
+    <ng-template #elseBlock>
+      <div>Add a Todo</div>
+    </ng-template>
+  </ul>
+  <input name='todoInput' type="text" [(ngModel)]='todoInput'>
+  <div class="buttons">
+    <button class='btn btn-primary' (click)='addTodoBtn()'>Add Todo</button>
+    <button class='btn btn-danger' (click)='saveTodos()'>Save Todos</button>
+  </div>
+</div>
